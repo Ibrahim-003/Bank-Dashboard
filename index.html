@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/ico.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Bank Dashboard - HBank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: '#FFF',
+                        'midnight-navy': '#262833',
+                        'graphite-gray': '#43454D',
+                        'misty-mint': '#E3ECE6',
+                        'slate-gray': '#6C727F',
+                        'lavender-mist': '#E4D6F3',
+                        'soft-peach': '#F5DDC8',
+                        'forest-green': '#73B06F',
+                        'orchid-purple': '#A686C4',
+                        'warm-sand': '#E9AE79',
+                        'transparent-white': '#FFFFFF33',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('./assets/images/background-image.png')",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="bg-midnight-navy min-h-screen text-white font-medium">
+        <header class="flex justify-between p-4 sm:px-6 sm:py-5 border-b border-graphite-gray">
+            <div>
+                <img src="./assets/images/hbank-logo.svg" alt="hbank logo">
+            </div>
+            <div class="flex items-center gap-3">
+                <img src="./assets/images/avatar.png" alt="user avatar">
+                <p class="text-white font-medium">Ethan Sutcliffe</p>
+            </div>
+        </header>
+        <div class="flex flex-row-reverse">
+            <aside class="w-full max-w-[332px] hidden md:block p-4 lg:p-6 border-l border-graphite-gray">
+                <section class="flex flex-col gap-6 border border-graphite-gray rounded-[20px] p-4">
+                    <h2 class="text-base text-white font-bold">Card details</h2>
+                    <div class="w-full h-[288px] relative">
+                        <div
+                            class="-rotate-90 origin-center w-[288px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <div class="bg-misty-mint p-6 pb-10 rounded-t-2xl">
+                                <div class="flex justify-between">
+                                    <p class="text-midnight-navy font-medium">Shopping Card</p>
+                                    <img src="./assets/images/sin.svg" alt="#">
+                                </div>
+                                <div class="flex justify-between mt-4">
+                                    <p class="font-medium text-slate-gray">NAME</p>
+                                    <p class="font-medium text-slate-gray">Exp 26/6</p>
+                                </div>
+                            </div>
+                            <div class="bg-forest-green p-4 rounded-b-2xl">
+                                <div class="flex justify-between">
+                                    <p class="text-midnight-navy font-extrabold">**** **** 7800</p>
+                                    <img src="./assets/images/visaLogo.svg" alt="#">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-xs">CARD NUMBER</h3>
+                        <h4 class="text-xl font-semibold">**** 1234 4567 7800</h4>
+                    </div>
+                    <div class="flex">
+                        <div>
+                            <p>EXPIRE DATE</p>
+                            <p>08/28</p>
+                        </div>
+                        <div class="mx-3 border-x border-x-graphite-gray px-3">
+                            <p>CVV</p>
+                            <p>08/28</p>
+                        </div>
+                        <div>
+                            <p>LEVEL</p>
+                            <p>02</p>
+                        </div>
+                    </div>
+                    <hr class="border-none h-px bg-graphite-gray">
+                    <h2 class="text-base font-bold">Spending limits</h2>
+                    <div>
+                        <h3 class="text-xs">DAILY TRANSACTION LIMIT</h3>
+                        <div class="my-3">
+                            <div class="w-full h-[8px] bg-white rounded-[50px]">
+                                <div class="w-[80px] h-full bg-forest-green rounded-[50px]"></div>
+                            </div>
+                        </div>
+                        <h4 class="text-base font-normal">$400 spent of $2000</h4>
+                    </div>
+                </section>
+            </aside>
+            <main class="w-full p-4 sm:p-6 flex flex-col gap-8">
+                <section class="flex flex-col gap-6 border border-graphite-gray rounded-[20px] p-4 sm:p-6 md:hidden">
+                    <h2 class="text-base text-white font-bold">Card details</h2>
+                    <div>
+                        <div class="w-full max-w-[288px] mx-auto">
+                            <div class="bg-misty-mint p-4 sm:p-6 sm:pb-10 rounded-t-2xl">
+                                <div class="flex justify-between">
+                                    <p class="text-midnight-navy font-medium">Shopping Card</p>
+                                    <img src="./assets/images/sin.svg" alt="#">
+                                </div>
+                                <div class="flex justify-between mt-4">
+                                    <p class="font-medium text-slate-gray">NAME</p>
+                                    <p class="font-medium text-slate-gray">Exp 26/6</p>
+                                </div>
+                            </div>
+                            <div class="bg-forest-green p-4 sm:p-6 rounded-b-2xl">
+                                <div class="flex justify-between">
+                                    <p class="text-midnight-navy font-extrabold">**** **** 7800</p>
+                                    <img src="./assets/images/visaLogo.svg" alt="#">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-xs">CARD NUMBER</h3>
+                        <h4 class="text-xl font-semibold">**** 1234 4567 7800</h4>
+                    </div>
+                    <div class="flex">
+                        <div>
+                            <p>EXPIRE DATE</p>
+                            <p>08/28</p>
+                        </div>
+                        <div class="mx-3 border-x border-x-graphite-gray px-3">
+                            <p>CVV</p>
+                            <p>08/28</p>
+                        </div>
+                        <div>
+                            <p>LEVEL</p>
+                            <p>02</p>
+                        </div>
+                    </div>
+                    <hr class="border-none h-px bg-graphite-gray">
+                    <h2 class="text-base font-bold">Spending limits</h2>
+                    <div>
+                        <h3 class="text-xs">DAILY TRANSACTION LIMIT</h3>
+                        <div class="my-3">
+                            <div class="w-full h-[8px] bg-white rounded-[50px]">
+                                <div class="w-[80px] h-full bg-forest-green rounded-[50px]"></div>
+                            </div>
+                        </div>
+                        <h4 class="text-base font-normal">$400 spent of $2000</h4>
+                    </div>
+                </section>
+                <section class="flex flex-col gap-6 border border-graphite-gray rounded-[20px] p-4 sm:p-6">
+                    <h2 class="text-base font-bold">Inventory Details</h2>
+                    <div class="w-full max-w-[680px] flex">
+                        <div
+                            class="w-full bg-misty-mint p-2 sm:p-6 rounded-l-2xl text-midnight-navy flex flex-col gap-4 justify-center">
+                            <h3>Your balance:</h3>
+                            <h4 class="text-2xl font-bold">$25,330</h4>
+                            <p>3 cards</p>
+                        </div>
+                        <div
+                            class="relative w-full bg-forest-green p-2 sm:p-6 rounded-r-2xl flex flex-col justify-end items-end">
+                            <img src="./assets/images/background-decor.svg" alt="#" class="absolute top-0 right-0">
+                            <button
+                                class="relative text-midnight-navy flex justify-center items-center bg-misty-mint px-2 sm:px-4 py-1 rounded-[50px]">
+                                Details
+                                <img src="./assets/images/arrow.svg" alt="#">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <h2 class="text-base font-bold">Inventory Details</h2>
+                        <span class="bg-graphite-gray px-2 py-[2px] rounded-[50px] text-[10px]">2</span>
+                    </div>
+                    <div class="flex flex-wrap gap-[22px] items-start">
+                        <div class="w-full max-w-[288px]">
+                            <div class="bg-lavender-mist p-4 sm:p-6 sm:pb-10 rounded-t-2xl">
+                                <div class="flex justify-between">
+                                    <p class="text-midnight-navy font-medium">Shopping Card</p>
+                                    <img src="./assets/images/sin.svg" alt="#">
+                                </div>
+                                <div class="flex justify-between mt-4">
+                                    <p class="font-medium text-slate-gray">NAME</p>
+                                    <p class="font-medium text-slate-gray">Exp 26/6</p>
+                                </div>
+                            </div>
+                            <div class="bg-orchid-purple p-4 sm:p-6 rounded-b-2xl">
+                                <div class="flex justify-between">
+                                    <p class="text-midnight-navy font-extrabold">**** **** 0928</p>
+                                    <img src="./assets/images/visaLogo.svg" alt="#">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full max-w-[288px]">
+                            <div class="bg-soft-peach p-4 sm:p-6 sm:pb-10 rounded-t-2xl">
+                                <div class="flex justify-between">
+                                    <p class="text-midnight-navy font-medium">Shopping Card</p>
+                                    <img src="./assets/images/sin.svg" alt="#">
+                                </div>
+                                <div class="flex justify-between mt-4">
+                                    <p class="font-medium text-slate-gray">NAME</p>
+                                    <p class="font-medium text-slate-gray">Exp 26/6</p>
+                                </div>
+                            </div>
+                            <div class="bg-warm-sand p-4 sm:p-6 rounded-b-2xl">
+                                <div class="flex justify-between">
+                                    <p class="text-midnight-navy font-extrabold">**** **** 4486</p>
+                                    <img src="./assets/images/visaLogo.svg" alt="#">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full max-w-[288px] h-[155px] sm:h-[203px] border border-dashed border-graphite-gray rounded-2xl flex justify-center items-center">
+                            <div class="flex">
+                                <img src="./assets/images/add.svg" alt="#">
+                                <p>Add Card</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-graphite-gray rounded-2xl flex flex-row flex-wrap">
+                        <div class="px-3 py-4 sm:px-5 sm:py-6 flex gap-4 items-center">
+                            <div class="w-12 h-12 bg-forest-green p-3 rounded-lg">
+                                <img src="./assets/images/show chart.svg" alt="#">
+                            </div>
+                            <div>
+                                <h3 class="text-slate-gray">Earnings</h3>
+                                <p class="mt-1 text-2xl font-semibold">$12,341</p>
+                            </div>
+                        </div>
+                        <div class="px-3 py-4 sm:px-5 sm:py-6 flex gap-4 items-center">
+                            <div class="w-12 h-12 bg-orchid-purple p-3 rounded-lg">
+                                <img src="./assets/images/dollar coin.svg" alt="#">
+                            </div>
+                            <div>
+                                <h3 class="text-slate-gray">Spending</h3>
+                                <p class="mt-1 text-2xl font-semibold">$4,009</p>
+                            </div>
+                        </div>
+                        <div class="px-3 py-4 sm:px-5 sm:py-6 flex gap-4 items-center">
+                            <div class="w-12 h-12 bg-warm-sand p-3 rounded-lg">
+                                <img src="./assets/images/aim.svg" alt="#">
+                            </div>
+                            <div>
+                                <h3 class="text-slate-gray">Goals</h3>
+                                <p class="mt-1 text-2xl font-semibold">$8,098</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <aside class="hidden min-w-[220px] lg:flex lg:flex-col justify-between p-6 border-r border-graphite-gray">
+                <div class="flex flex-col gap-9">
+                    <div class="w-max flex flex-row items-center gap-2">
+                        <img src="./assets/images/House.svg" alt="#">
+                        <a href="#" class="text-base">Dashboard</a>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <h3 class="text-xs text-slate-gray">ANALYTICS</h3>
+                        <div class="flex flex-col gap-5">
+                            <div class="w-max flex items-center gap-2">
+                                <img src="./assets/images/show chart-1.svg" alt="#">
+                                <a href="#" class="text-base">Performance</a>
+                            </div>
+                            <div class="flex flex-row justify-between items-center">
+                                <div class="w-max flex items-center gap-2">
+                                    <img src="./assets/images/Archery.svg" alt="#">
+                                    <a href="#" class="text-base">Hotjar</a>
+                                </div>
+                                <div
+                                    class="bg-orchid-purple px-2 py-[2px] rounded-[50px] flex justify-center items-center">
+                                    <span class="text-[10px]">New</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <h3 class="text-xs text-slate-gray">SUPPORT</h3>
+                        <div class="flex flex-col gap-5">
+                            <div class="flex flex-row justify-between items-center">
+                                <div class="w-max flex items-center gap-2">
+                                    <img src="./assets/images/ticket.svg" alt="#">
+                                    <a href="#" class="text-base">Tickets</a>
+                                </div>
+                                <div
+                                    class="bg-slate-gray px-2 py-[2px] rounded-[50px] flex justify-center items-center">
+                                    <span class="text-[10px]">18</span>
+                                </div>
+                            </div>
+                            <div class="w-max flex items-center gap-2">
+                                <img src="./assets/images/account.svg" alt="#">
+                                <a href="#" class="text-base">Agents</a>
+                            </div>
+                            <div class="w-max flex items-center gap-2">
+                                <img src="./assets/images/users.svg" alt="#">
+                                <a href="#" class="text-base">Customers</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <h3 class="text-xs text-slate-gray">SHOP</h3>
+                        <div class="flex flex-col gap-5">
+                            <div class="w-max flex items-center gap-2">
+                                <img src="./assets/images/shop.svg" alt="#">
+                                <a href="#" class="text-base">Products</a>
+                            </div>
+                            <div class="w-max flex items-center gap-2">
+                                <img src="./assets/images/basket.svg" alt="#">
+                                <a href="#" class="text-base">Orders</a>
+                            </div>
+                            <div class="w-max flex items-center gap-2">
+                                <img src="./assets/images/chat info.svg" alt="#">
+                                <a href="#" class="text-base">Reports</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <div class="w-max flex items-center gap-2">
+                        <img src="./assets/images/Setting.svg" alt="#">
+                        <a href="#" class="text-base">Settings</a>
+                    </div>
+                    <div class="w-max flex items-center gap-2">
+                        <img src="./assets/images/Logout.svg" alt="#">
+                        <a href="#" class="text-base">Logout</a>
+                    </div>
+                </div>
+            </aside>
+            <aside class="flex flex-col justify-between px-3 py-4 sm:py-6 border-r border-graphite-gray lg:hidden">
+                <div class="flex flex-col gap-5">
+                    <div class="w-5">
+                        <img src="./assets/images/House.svg" alt="#">
+                    </div>
+                    <div>
+                        <img src="./assets/images/show chart-1.svg" alt="#">
+                    </div>
+                    <div>
+                        <img src="./assets/images/Archery.svg" alt="#">
+                    </div>
+                    <div>
+                        <img src="./assets/images/ticket.svg" alt="#">
+                    </div>
+                    <div>
+                        <img src="./assets/images/account.svg" alt="#">
+                    </div>
+                    <div>
+                        <img src="./assets/images/users.svg" alt="#">
+                    </div>
+                    <div>
+                        <img src="./assets/images/shop.svg" alt="#">
+                    </div>
+                    <div>
+                        <img src="./assets/images/basket.svg" alt="#">
+                    </div>
+                    <div>
+                        <img src="./assets/images/chat info.svg" alt="#">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <div>
+                        <img src="./assets/images/Setting.svg" alt="home link">
+                    </div>
+                    <div>
+                        <img src="./assets/images/Logout.svg" alt="home link">
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>
