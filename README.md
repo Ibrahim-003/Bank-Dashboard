@@ -4,7 +4,7 @@ Este proyecto es una interfaz de usuario para un panel de control de un banco fi
 
 ## Vista Previa
 
-![Captura del Proyecto](./assets/images/desktop-preview.png)
+![Captura del Proyecto](./src/assets/images/desktop-preview.webp)
 
 Puedes ver la versión demo en vivo aquí: [Bank Dashboard](https://ibrahim-003.github.io/Bank-Dashboard/)
 
@@ -46,6 +46,5 @@ Puedes ver la versión demo en vivo aquí: [Bank Dashboard](https://ibrahim-003.
 - Tailwind CSS
 - Google Fonts
 
-## Autor
-
-Este proyecto fue creado por [Ibrahim Almeyda].
+## Autor 👨‍💻
+Desarrollado por **[Ibrahim Almeyda](https://github.com/Ibrahim-003)**.
